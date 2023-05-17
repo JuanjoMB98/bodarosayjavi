@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !^/httpdocs/
+RewriteRule ^(.*)$ httpdocs/$1 [L]
