@@ -13,6 +13,11 @@ html {
     box-sizing: border-box;
     z-index: 1;
 }
+:where(img){
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 
 body {
     font-size: 16rem;
@@ -24,6 +29,20 @@ a {
     text-decoration: none;
 }
 
+.a-button{
+    padding: 16px 24px;
+    border-radius: 4px;
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(14rem, 3vw, 18rem);
+}
+.a-button.-primary{
+    background-color: var(--mainColor);
+    color: white;
+}
+
+/* || HEADER  ----------------------------------------------------------------*/
 .o-mainHeader {
     display: flex;
     flex-direction: row;
@@ -35,18 +54,45 @@ a {
 
     background-color: #fcf9f4;
     box-shadow: 0px 14.2579px 28.5158px rgba(0, 0, 0, 0.05);
-    padding: 25rem;
+    padding: 25rem 64rem;
+    z-index: 2;
 }
+
+/* |> LEFT SIDE ---------------------------------------------------------------*/
+.m-headerLogo__container{
+    display: flex;
+    flex-direction: row;
+    gap: 16rem;
+    align-items: center;
+    justify-content: center;
+}
+.m-headerLogoContainer__img{
+    display: flex;
+    width: 64rem;
+}
+.m-headerLogoContainer__name{
+    font-family: 'Abhaya Libre';
+    font-weight: 700;
+    font-size: 24rem;
+    color: var(--mainColor);
+}
+
+/* |> RIGHT SIDE -------------------------------------------------------------*/
 .m-headerLink__container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 16rem;
+    gap: 32rem;
 
     list-style: none;
 }
-
+.a-headerLink__text{
+    font-family: 'Fira Sans';
+    font-weight: 400;
+    font-size: 16rem;
+    color: var(--mainColor);
+}
 .m-headerLink__item {
     text-decoration: none;
     cursor: pointer;
@@ -56,6 +102,9 @@ a {
     background-color: var(--mainColor);
     border-radius: 4px;
     color: white;
+}
+.m-headerLink__item:last-child .a-headerLink__text{
+    color: var(--mainBackground);
 }
 
 .m-headerButton {
@@ -69,6 +118,64 @@ a {
     gap: 4rem;
     z-index: 999;
     cursor: pointer;
+}
+
+.o-heroSection{
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 114rem);
+}
+.m-heroSection__info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24rem;
+}
+.a-heroTitle{
+    font-family: 'Petit Formal Script';
+    font-size: clamp(32rem, 5vw, 64rem);
+    text-align: center;
+    color: var(--mainColor);
+    margin: 0;
+}
+.m-heroSection__image{
+    flex: 1;
+}
+.m-heroSection__image img{
+    object-fit: cover;
+    object-position: 70% center;
+}
+.m-countDown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.m-countDown__list{
+    display: flex;
+    flex-direction: row;
+    gap: 64rem;
+    margin: 0;
+    padding: 0 16rem;
+}
+.m-countDown__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8rem;
+}
+.a-countDown__label{
+    font-family: 'EB Garamond';
+    font-weight: 400;
+    font-size: clamp(14rem, 5vw, 24rem);
+    color: var(--mainColor);
+}
+.a-countDown__number{
+    font-family: 'Fira Sans';
+    font-weight: 900;
+    font-size: clamp(24rem, 5vw, 64rem);
+    color: var(--mainColor);
 }
 /* || SECTION ----------------------------------------------------------------*/
 .o-sectionContainer{
@@ -109,7 +216,9 @@ a {
 
 @media (max-width: 720px) {
     /* || NAVEGADOR RESPONSIVE -----------------------------------------------*/
-
+    .o-mainHeader{
+        padding: 24rem;
+    }
     .m-headerNav {
         position: fixed;
         inset: 0 0 0 30%;
@@ -135,16 +244,19 @@ a {
     .m-headerButton[aria-expanded="false"] span{
         background-color: var(--mainColor);
     }
+    .a-headerLink__text{
+        color: var(--mainBackground);
+    }
 
-    span:nth-of-type(1) {
+    .a-headerButton__line:nth-of-type(1) {
         width: 50%;
     }
 
-    span:nth-of-type(2) {
+    .a-headerButton__line:nth-of-type(2) {
         width: 100%;
     }
 
-    span:nth-of-type(3) {
+    .a-headerButton__line:nth-of-type(3) {
         width: 75%;
     }
 
@@ -161,4 +273,28 @@ a {
         transform: rotatez(-45deg);
         position: absolute;
     }
+
+    .o-heroSection{
+        flex-direction: column;
+    }
+    .m-heroSection__info{
+        gap: 48rem;
+        padding: 32rem;
+
+    }
+    .m-countDown__list{
+        flex-wrap: wrap;
+        gap: 0;
+        row-gap: 16rem;
+        column-gap: 32rem;
+        justify-content: center;
+    }
+    .m-countDown__item:nth-child(1){
+        width: 100%;
+
+    }
+    .m-countDown__item:nth-child(1) .a-countDown__number{
+        font-size: 64rem;
+    }
+
 }
