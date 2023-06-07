@@ -1,14 +1,17 @@
 :root {
     --mainColor: #3d5545;
+    --mainBackground: #FCF9F4;
 }
 
 html {
     font-size: 1px;
+    background-color: #fcf9f4;
 }
 
-::where(*) {
+:where(*) {
     position: relative;
     box-sizing: border-box;
+    z-index: 1;
 }
 
 body {
@@ -67,20 +70,54 @@ a {
     z-index: 999;
     cursor: pointer;
 }
+/* || SECTION ----------------------------------------------------------------*/
+.o-sectionContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 64px;
+}
+/* |> SECTION ----------------------------------------------------------------*/
+
+
+/* || FOOTER -----------------------------------------------------------------*/
+.o-mainFooter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 72rem;
+    padding: 16rem 0;
+    background: #fcf9f4;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+    z-index: 0;
+}
+.a-mainFooter__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Fira Sans";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+
+    color: #1c2922;
+    opacity: 0.5;
+}
 
 @media (max-width: 720px) {
-
     /* || NAVEGADOR RESPONSIVE -----------------------------------------------*/
 
     .m-headerNav {
         position: fixed;
         inset: 0 0 0 30%;
-        background-color: hsl(0, 0%, 100% / 0.1);
-        backdrop-filter: blur(16rem);
+        background-color: var(--mainColor);
         transform: translateX(100%);
-        transition: transform ease 0.5s ;
+        transition: transform ease 0.5s;
     }
-    .m-headerNav[data-visible="true"]{
+    .m-headerNav[data-visible="true"] {
         transform: translateX(0%);
     }
     .m-headerLink__container {
@@ -89,11 +126,14 @@ a {
         align-items: flex-start;
     }
     .m-headerButton span {
-        background-color: var(--mainColor);
+        background-color: var(--mainBackground);
         border-radius: 10px;
         height: 3px;
         transform-origin: center center;
         transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    }
+    .m-headerButton[aria-expanded="false"] span{
+        background-color: var(--mainColor);
     }
 
     span:nth-of-type(1) {
@@ -121,7 +161,4 @@ a {
         transform: rotatez(-45deg);
         position: absolute;
     }
-
-
-
 }
