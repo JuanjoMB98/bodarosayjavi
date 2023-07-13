@@ -6,6 +6,7 @@
 html {
     font-size: 1px;
     background-color: #fcf9f4;
+    scroll-behavior: smooth;
 }
 
 :where(*) {
@@ -185,8 +186,56 @@ a {
     padding: 0px;
     gap: 64px;
 }
-/* |> SECTION ----------------------------------------------------------------*/
+/* |> WELCOME SECTION '-------------------------------------------------------*/
+.o-welcomeSection{
+    padding: 72rem 0;
+    background-color: var(--mainColor);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.o-welcomeSection span{
+    color: var(--mainBackground);
+    text-align: center;
+    font-family: 'EB Garamond', serif;
+    font-size: 24rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 600rem;
+}
 
+/* |> INFO SECTION -----------------------------------------------------------*/
+.m-infoSection__layout{
+    display: flex;
+    flex-direction: row;
+    gap: 40rem;
+}
+.m-infoSectionContent__text{
+    max-width: 600rem;
+}
+
+/* |> WELCOME SECTION '-------------------------------------------------------*/
+.o-hotelSection{
+    padding: 72rem 0;
+    background-color: #ECECE7;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.o-welcomeSection span{
+    color: var(--mainBackground);
+    text-align: center;
+    font-family: 'EB Garamond', serif;
+    font-size: 24rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 600rem;
+}
 
 /* || FOOTER -----------------------------------------------------------------*/
 .o-mainFooter {
