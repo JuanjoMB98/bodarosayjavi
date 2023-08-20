@@ -222,6 +222,7 @@ a {
 }
 .m-infoSection__content{
     max-width: 540rem;
+    margin-top: 16rem;
 }
 .m-infoSectionContent__text{
     max-width: 600rem;
@@ -252,6 +253,16 @@ a {
 .m-infoSection__image{
     display: flex;
     flex-direction: column;
+}
+.m-infoSection__image{
+    display: flex;
+    flex-direction: row;
+    gap: 8rem;
+}
+#vueltaRoca::after{
+    content: "Vuelta a Rocafor";
+    background-color: var(--mainColor);
+    padding: 8rem 16rem;
 }
 
 /* |> WELCOME SECTION '-------------------------------------------------------*/
@@ -398,9 +409,7 @@ a {
         padding: 16rem;
     }
     .m-infoSection__image{
-        display: flex;
         flex-direction: column;
-        gap: 8rem;
     }
     iframe{
         width: 100%;
