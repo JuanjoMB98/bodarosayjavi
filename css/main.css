@@ -73,8 +73,8 @@ a {
     width: 64rem;
 }
 .m-headerLogoContainer__name{
-    font-family: 'Abhaya Libre';
-    font-weight: 700;
+    font-family: 'EB Garamond';
+    font-weight: 500;
     font-size: 24rem;
     color: var(--mainColor);
 }
@@ -379,6 +379,9 @@ a {
 }
 
 @media (max-width: 720px) {
+    html {
+        scroll-padding-top: 0rem ;
+    }
     /* || NAVEGADOR RESPONSIVE -----------------------------------------------*/
     .o-mainHeader{
         padding: 24rem;
