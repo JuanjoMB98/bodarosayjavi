@@ -7,6 +7,7 @@ html {
     font-size: 1px;
     background-color: #fcf9f4;
     scroll-behavior: smooth;
+    scroll-padding-top: 120rem ;
 }
 
 :where(*) {
@@ -135,11 +136,12 @@ a {
     gap: 24rem;
 }
 .a-heroTitle{
-    font-family: 'Petit Formal Script';
-    font-size: clamp(32rem, 5vw, 64rem);
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(32rem, 5vw, 90rem);
     text-align: center;
     color: var(--mainColor);
     margin: 0;
+    font-weight: 400;
 }
 .m-heroSection__image{
     flex: 1;
@@ -267,7 +269,7 @@ a {
 
 /* |> WELCOME SECTION '-------------------------------------------------------*/
 .o-hotelSection{
-    padding: 72rem 0;
+    padding: 72rem 16rem;
     background-color: #ECECE7;
     width: 100%;
     display: flex;
@@ -289,10 +291,60 @@ a {
 .o-formSection{
     padding: 32rem;
     border-radius: 15rem;
-    overflow: none;
-    border: 2px solid var(--mainColor);
+    /* border: 2px solid var(--mainColor); */
+    margin: 0 auto ;
+}
+.o-formSection iframe {
+    height: 1500px;
 }
 
+/* || HOTELES ----------------------------------------------------------------*/
+.o-hotelSection .m-infoSectionContent__header{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.o-hotelSection .m-infoSectionContent__text{ 
+    max-width: 700rem;
+}
+
+.m-hotelList{
+    display: flex;
+    flex-direction: column;
+    gap: 48rem;
+    padding: 0;
+}
+
+.m-hotelItem{
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-color: #1c292210;
+    padding: 24rem;
+    border-radius: 8rem;
+}
+.m-hotelItem hr{
+    width: 20%;
+    opacity: 0.4;
+}
+
+.m-hotelHeader{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    text-align: center;
+}
+.m-hotelHeader__title{
+    font-size: 20rem;
+}
+.m-hotelHeader__address{
+    opacity: 0.5;
+}
 
 
 /* || FOOTER -----------------------------------------------------------------*/
@@ -319,6 +371,11 @@ a {
 
     color: #1c2922;
     opacity: 0.5;
+}
+
+
+#ff-compose div{
+    width: 100%;
 }
 
 @media (max-width: 720px) {
@@ -413,6 +470,10 @@ a {
     }
     iframe{
         width: 100%;
+    }
+
+    .o-formSection iframe {
+        height: 2000px;
     }
 
 }
