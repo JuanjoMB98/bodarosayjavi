@@ -474,7 +474,11 @@ a {
     iframe{
         width: 100%;
     }
-
+    .o-formSection{
+        padding: 0rem;
+        margin: 0;
+        width: 100%;
+    }
     .o-formSection iframe {
         height: 2000px;
     }
