@@ -253,7 +253,7 @@ a {
 .a-infoHeader__title{
     color: var(--mainColor);
     font-family: EB Garamond;
-    font-size: 48px;
+    font-size: clamp(32px, 3vw, 48px);;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -427,6 +427,12 @@ a {
     .m-headerButton[aria-expanded="false"] span{
         background-color: var(--mainColor);
     }
+    .o-welcomeSection {
+        padding: 32rem 16rem;
+    }
+    .o-welcomeSection span {
+        font-size: 16rem;
+    }
     .a-headerLink__text{
         color: var(--mainBackground);
     }
@@ -497,6 +503,9 @@ a {
     }
     .o-formSection iframe {
         height: 2000px;
+    }
+    .m-heroSection__image img {
+        object-position: 70% 35%;
     }
 
 }
