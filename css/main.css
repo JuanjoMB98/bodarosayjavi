@@ -145,6 +145,8 @@ a {
 }
 .m-heroSection__image{
     flex: 1;
+    height: 100%;
+    overflow: hidden;
 }
 .m-heroSection__image img{
     object-fit: cover;
@@ -225,6 +227,10 @@ a {
 .m-infoSection__content{
     max-width: 540rem;
     margin-top: 16rem;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .m-infoSectionContent__text{
     max-width: 600rem;
@@ -247,10 +253,20 @@ a {
 .a-infoHeader__title{
     color: var(--mainColor);
     font-family: EB Garamond;
-    font-size: 32px;
+    font-size: 48px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin: 8rem 0;
+}
+.a-infoHeader__hour{
+    color: var(--mainColor);
+    font-family: 'Great Vibes', cursive;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    margin: 0;
 }
 .m-infoSection__image{
     display: flex;
