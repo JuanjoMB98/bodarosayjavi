@@ -369,7 +369,31 @@ a {
     opacity: 0.5;
 }
 
-
+/* || TRANSFERENCIA */
+.o-welcomeSection.-transefer{
+    flex-direction: column;
+    gap: 24rem;
+}
+.o-welcomeSection.-transefer span:nth-child(1){
+    font-family: 'Great Vibes',cursive;
+    font-size: clamp(32rem, 5vw, 45rem);
+}
+.o-welcomeSection.-transefer span:nth-child(2){
+    font-family: Fira Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 200%;
+    opacity: 0.6;
+}
+.o-welcomeSection.-transefer span:nth-child(3){
+    font-family: Fira Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 200%;
+    opacity: 0.6;
+}
 /* || FOOTER -----------------------------------------------------------------*/
 .o-mainFooter {
     display: flex;
