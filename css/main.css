@@ -535,8 +535,5 @@ a {
     .o-formSection iframe {
         height: 2000px;
     }
-    .m-heroSection__image img {
-        object-position: 70% 35%;
-    }
 
 }
