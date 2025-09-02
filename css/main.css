@@ -496,6 +496,8 @@ a {
 
     .o-heroSection{
         flex-direction: column;
+        min-height: calc(100vh - 164rem);
+        height: inherit;
     }
     .m-heroSection__info{
         gap: 48rem;
